@@ -20,6 +20,7 @@ const currentHashMap = JSON.parse((await readFile(HASH_FILE)).toString());
 const folders = await readdir(DATA_DIR);
 
 const folderHash = await Promise.all(folders.map(async folder => {
+    console.log(DATA_DIR, folder);
     const folderPath = path.join(DATA_DIR, folder);
     const hash = await createFolderHash(folderPath);
 
