@@ -20,9 +20,9 @@ url: https://github.com/harshdoesdev
 name: twitter
 url: https://twitter.com/harshthedev
 
--- social:
-name: linkedin
-url: https://linkedin.com/in/harshsingh-in
+;; -- social:
+;; name: linkedin
+;; url: https://linkedin.com/in/harshsingh-in
 
 -- social:
 name: dev.to
