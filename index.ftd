@@ -179,7 +179,7 @@ steps: $page.steps
 
 -- string: Checkout to the `pages` branch.
 
--- string: Create a folder with your name and add your fastn webpage code.
+-- string: Create a folder in the `pages` directory with your name and add your fastn webpage code.
 
 -- string: Create a Pull Request (PR) against the `pages` branch to merge your changes.
 
