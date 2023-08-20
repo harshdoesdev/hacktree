@@ -1,0 +1,34 @@
+name: Build and Deploy Pages on PR Close
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Run Node.js Script
+        run: node build.js
+
+      - name: Copy Contents to gh-pages Branch
+        run: |
+          mkdir deploy
+          cp -R rendered/* deploy/
+          cd deploy
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deployed from GitHub Actions"
+          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}" master:gh-pages
