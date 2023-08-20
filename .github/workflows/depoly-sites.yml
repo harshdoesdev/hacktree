@@ -18,9 +18,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Fastn
-        run: sh -c "$(curl -fsSL https://fastn.io/install.sh)"
-       
       - name: Run Node.js Script
         run: node build.js
 
@@ -34,4 +31,4 @@ jobs:
           git config user.email "actions@github.com"
           git add .
           git commit -m "Deployed from GitHub Actions"
-          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}" master:gh-pages
+          git push --force --quiet "https://${{ secrets.PERSONAL_ACCESS_TOKEN }}" master:gh-pages
