@@ -1,6 +1,6 @@
 import { readFile, readdir } from 'fs/promises';
 import { chdir, cwd } from 'process';
-import { execSync } from 'child_process';
+import { exec, execSync } from 'child_process';
 import { createFolderHash } from './lib/create-hash.js';
 import { getValidName } from './lib/get-valid-name.js';
 import path from 'path';
@@ -51,9 +51,9 @@ for(const [folder, { folderName }] of pagesToBeUpdated) {
 
         const buildDir = path.join(folderPath, '.build');
 
-        if(existsSync(buildDir)) {
-            renameSync(buildDir, outputDirPath);
-        }
+        const mvOutput = execSync(`mv ${buildDir} ${outputDirPath}`);
+
+        console.log(mvOutput);
     } catch(e) {
         console.log(e);
     }
