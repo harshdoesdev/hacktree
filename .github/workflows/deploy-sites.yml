@@ -2,6 +2,7 @@ name: Deploy HackTree Pages
 
 on:
     pull_request:
+      branches: pages
       types:
         - closed
 

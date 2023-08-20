@@ -5,8 +5,7 @@
     "main": "build.js",
     "type": "module",
     "scripts": {
-        "build": "node ./build-main.js",
-        "build:pages": "node ./build.js"
+        "build": "node ./build.js"
     },
     "keywords": [],
     "author": "",
