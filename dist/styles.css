@@ -1,0 +1,179 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    position: relative;
+    background-color: #FAF9F9;
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.hack {
+    color: #333;
+}
+
+.tree {
+    color: #37AB63; /* Green color */
+}
+
+.menu-icon {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #F37C23; /* Orange color */
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #37AB63; /* Green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2E854C; /* Darker green color */
+}
+
+/* Get Started Section */
+#get-started {
+    padding: 80px 0;
+    text-align: center;
+    color: #333;
+}
+
+#get-started h2 {
+    color: #333;
+}
+
+#get-started p {
+    margin-bottom: 40px;
+}
+
+#get-started ol {
+    list-style-type: decimal;
+    padding-left: 40px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #F37C23; /* Orange color */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    font-size: 0.8rem;
+}
+
+.footer-logo img {
+    width: 80px;
+    margin-top: 1rem;
+}
+
+.stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #F37C23; /* Orange color */
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        margin-right: 2rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* ... (Other responsive styles) ... */
+}
