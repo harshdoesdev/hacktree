@@ -2,7 +2,7 @@
 
 -- ftd.text: $bio.harsh.name
 
--- ftd.text: Social Links
+-- ftd.text: Social Links:
 
 -- ftd.text: $link.name
 url: $link.url
