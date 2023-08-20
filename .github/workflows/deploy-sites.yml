@@ -24,14 +24,8 @@ jobs:
       - name: Run Node.js Script
         run: node build.js
 
-      - name: Copy Contents to gh-pages Branch
-        run: |
-          mkdir deploy
-          cp -R rendered/* deploy/
-          cd deploy
-          git init
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add .
-          git commit -m "Deployed from GitHub Actions"
-          git push --force --quiet "https://${{ secrets.PERSONAL_ACCESS_TOKEN }}" main:gh-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

@@ -1,11 +1,11 @@
 import { readFile, readdir } from 'fs/promises';
 import { chdir, cwd } from 'process';
-import { exec, execSync } from 'child_process';
+import { execSync } from 'child_process';
 import { createFolderHash } from './lib/create-hash.js';
 import { getValidName } from './lib/get-valid-name.js';
 import path from 'path';
 import hasKey from './lib/has.js';
-import { existsSync, readdirSync, renameSync, rmSync, writeFileSync } from 'fs';
+import { existsSync, rmSync, writeFileSync } from 'fs';
 
 const CURRENT_DIR = cwd();
 
@@ -13,7 +13,7 @@ const DATA_DIR = path.join(CURRENT_DIR, 'pages');
 
 const HASH_FILE = path.join(CURRENT_DIR, '.hash.json');
 
-const OUTPUT_DIR = path.join(CURRENT_DIR, 'rendered');
+const OUTPUT_DIR = path.join(CURRENT_DIR, 'dist');
 
 const currentHashMap = JSON.parse((await readFile(HASH_FILE)).toString());
 
