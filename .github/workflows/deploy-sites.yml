@@ -1,8 +1,10 @@
 name: Deploy HackTree Pages
+
 on:
-  push:
-    branches:
-      - gh-pages
+    pull_request:
+      branches: gh-pages
+      types:
+        - closed
 
 jobs:
   deploy:
