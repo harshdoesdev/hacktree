@@ -31,10 +31,13 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           keep_files: true
-      - name: Update hash
+      - name: Update .hash.json
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add ./.hash.json
-          git commit -m "Updated hash"
-          git push
+          git commit -m "Updated .hash.json"
+          git remote remove origin
+          git remote add origin https://harshdoesdev:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/harshdoesdev/hacktree.git
+          git push origin HEAD:pages
+        
