@@ -47,9 +47,9 @@ for(const [folder, { folderName }] of pagesToBeUpdated) {
             rmSync(outputDirPath, { recursive: true, force: true });
         }
 
-        await rename(path.join(folderPath, '.build'), outputDirPath);
+        console.log(`BUILD ${folder}:`, output);
 
-        console.log(`BUILDING ${folder}:`, output);
+        await rename(path.join(folderPath, '.build'), outputDirPath);
     } catch(e) {
         console.log(e);
     }
