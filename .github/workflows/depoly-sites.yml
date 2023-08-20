@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install Fastn
+        run: sh -c "$(curl -fsSL https://fastn.io/install.sh)"
+
       - name: Run Node.js Script
         run: node build.js
 
