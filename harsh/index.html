@@ -587,10 +587,6 @@
 "url": "https://x.com/harshthedev"
 },
 {
-"name": "linkedin",
-"url": "https://linkedin.com/in/harshsingh-in"
-},
-{
 "name": "dev.to",
 "url": "https://dev.to/theharshsingh"
 }
@@ -605,10 +601,6 @@
 {
 "name": "x",
 "url": "https://x.com/harshthedev"
-},
-{
-"name": "linkedin",
-"url": "https://linkedin.com/in/harshsingh-in"
 },
 {
 "name": "dev.to",
@@ -632,7 +624,7 @@
 </head>
 <body style="height: 100%; margin: 0;">
 
-<div data-id="main" style="height: 100%; width: 100%" class="ft_common ft_column"><div data-id="0:main" style="" class="ft_common ft_md">Harsh Singh</div><div data-id="1:main" style="" class="ft_common ft_md">Social Links:</div><a data-id="2:main" href="https://github.com/harshdoesdev" style="" class="ft_common ft_md">github</a><a data-id="3:main" href="https://x.com/harshthedev" style="" class="ft_common ft_md">x</a><a data-id="4:main" href="https://linkedin.com/in/harshsingh-in" style="" class="ft_common ft_md">linkedin</a><a data-id="5:main" href="https://dev.to/theharshsingh" style="" class="ft_common ft_md">dev.to</a></div>
+<div data-id="main" style="height: 100%; width: 100%" class="ft_common ft_column"><div data-id="0:main" style="" class="ft_common ft_md">Harsh Singh</div><div data-id="1:main" style="" class="ft_common ft_md">Social Links:</div><a data-id="2:main" href="https://github.com/harshdoesdev" style="" class="ft_common ft_md">github</a><a data-id="3:main" href="https://x.com/harshthedev" style="" class="ft_common ft_md">x</a><a data-id="4:main" href="https://dev.to/theharshsingh" style="" class="ft_common ft_md">dev.to</a></div>
 
 <script src="default-1658FA10DBCAC18203B086469F1F0DB9A2FE592C98D1DA93A39718C63E1A0B09.js"></script>
 <script>
@@ -788,32 +780,19 @@ if (document.querySelector(`[data-id="4:main"]`).getAttribute("href") == "REMOVE
 document.querySelector(`[data-id="4:main"]`).removeAttribute("href");
 }
 }
-window.node_change_main["5:main__text"] = function(data) {
-document.querySelector(`[data-id="5:main"]`).innerHTML = resolve_reference("hacktree/harsh/bio#harsh.social-links.3.name", data);
-}
-
-window.node_change_main["5:main__href"] = function(data) {
-document.querySelector(`[data-id="5:main"]`).setAttribute("href", resolve_reference("hacktree/harsh/bio#harsh.social-links.3.url", data));
-
-if (document.querySelector(`[data-id="5:main"]`).getAttribute("href") == "REMOVE-KEY"){
-document.querySelector(`[data-id="5:main"]`).removeAttribute("href");
-}
-}
 window.set_value_main = {};
 window.set_value_main["hacktree/harsh/bio#harsh"] = function (data, new_value, remaining) {
 window.ftd.utils.set_value_helper(data, "hacktree/harsh/bio#harsh", remaining, new_value);
 
 window.ftd.call_mutable_value_changes("hacktree/harsh/bio#harsh", "main");
 window.ftd.call_immutable_value_changes("hacktree/harsh/bio#harsh", "main");
-window.ftd.utils.node_change_call("main","4:main__text", data);
-window.ftd.utils.node_change_call("main","3:main__text", data);
-window.ftd.utils.node_change_call("main","5:main__href", data);
-window.ftd.utils.node_change_call("main","3:main__href", data);
-window.ftd.utils.node_change_call("main","4:main__href", data);
-window.ftd.utils.node_change_call("main","5:main__text", data);
 window.ftd.utils.node_change_call("main","0:main__text", data);
-window.ftd.utils.node_change_call("main","2:main__text", data);
+window.ftd.utils.node_change_call("main","3:main__href", data);
 window.ftd.utils.node_change_call("main","2:main__href", data);
+window.ftd.utils.node_change_call("main","4:main__href", data);
+window.ftd.utils.node_change_call("main","2:main__text", data);
+window.ftd.utils.node_change_call("main","3:main__text", data);
+window.ftd.utils.node_change_call("main","4:main__text", data);
 };
 
 
