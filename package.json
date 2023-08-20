@@ -1,0 +1,14 @@
+{
+    "name": "hacktree",
+    "version": "0.0.1",
+    "description": "Build Link-in-bio pages using fastn",
+    "main": "build.js",
+    "type": "module",
+    "scripts": {
+        "build": "node ./build-main.js",
+        "build:pages": "node ./build.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
