@@ -1,9 +1,8 @@
-name: Deploy HackTree Pages
+name: Deploy HackTree Landing Page
 
 on:
-    pull_request:
-      types:
-        - closed
+    push:
+      branches: main
 
 jobs:
   build:
@@ -22,7 +21,7 @@ jobs:
         run: sh -c "$(curl -fsSL https://fastn.io/install.sh)"
 
       - name: Run Node.js Script
-        run: npm run build:pages
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
