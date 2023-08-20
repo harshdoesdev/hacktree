@@ -177,9 +177,11 @@ steps: $page.steps
 
 -- string: Clone or fork the hacktree.in repository.
 
+-- string: Checkout to the `pages` branch.
+
 -- string: Create a folder with your name and add your fastn webpage code.
 
--- string: Create a Pull Request (PR) to merge your changes.
+-- string: Create a Pull Request (PR) against the `pages` branch to merge your changes.
 
 -- string: Once merged, your link-in-bio page goes live!
 
