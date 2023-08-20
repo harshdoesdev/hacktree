@@ -1,11 +1,11 @@
-import { readFile, readdir, rename } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
 import { chdir, cwd } from 'process';
 import { execSync } from 'child_process';
 import { createFolderHash } from './lib/create-hash.js';
 import { getValidName } from './lib/get-valid-name.js';
 import path from 'path';
 import hasKey from './lib/has.js';
-import { existsSync, readdirSync, rmSync, writeFileSync } from 'fs';
+import { existsSync, readdirSync, renameSync, rmSync, writeFileSync } from 'fs';
 
 const CURRENT_DIR = cwd();
 
@@ -48,10 +48,12 @@ for(const [folder, { folderName }] of pagesToBeUpdated) {
         }
 
         console.log(`BUILD ${folder}:`, output);
-        
-        console.log(readdirSync(folderPath, { withFileTypes: true }));
 
-        await rename(path.join(folderPath, '.build'), outputDirPath);
+        const buildDir = path.join(folderPath, '.build');
+
+        if(existsSync(buildDir)) {
+            renameSync(buildDir, outputDirPath);
+        }
     } catch(e) {
         console.log(e);
     }
