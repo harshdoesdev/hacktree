@@ -70,12 +70,15 @@ border-radius.rem: .25
 
 -- component step:
 caption string text:
-integer number:
 
--- ftd.row:
-width: fill-container
-spacing.fixed.rem: 2
-align-content: center
+-- ftd.text: $step.text
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: step
+
+-- component step-number:
+caption integer num:
 
 -- ftd.column:
 align-content: center
@@ -85,19 +88,13 @@ height.fixed.rem: 3
 background.solid: $inherited.colors.custom.one
 border-radius.percent: 50
 
--- ftd.integer: $step.number
+-- ftd.integer: $step-number.num
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 
 -- end: ftd.column
 
--- ftd.text: $step.text
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
--- end: ftd.row
-
--- end: step
+-- end: step-number
 
 -- component get-started:
 string list steps:
@@ -112,9 +109,27 @@ align-content: center
 role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
 
+-- ftd.row:
+spacing.fixed.rem: 2
+
+-- ftd.column:
+spacing.fixed.rem: 2
+
+-- step-number: $LOOP.COUNTER
+for: $step-text in $get-started-steps
+
+-- end: ftd.column
+
+-- ftd.column:
+height: fill-container
+spacing: space-between
+
 -- step: $step-text
-number: $LOOP.COUNTER
 for: $step-text in $get-started.steps
+
+-- end: ftd.column
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -137,7 +152,7 @@ align-content: center
 role: $inherited.types.copy-small
 color: $inherited.colors.text
 
--- ftd.image: https://fastn.com/-/fastn.com/images/fastn.svg
+-- ftd.image: https://fastn.com/-/fastn.com/images/fastn-dark.svg
 link: https://fastn.com
 
 -- end: ftd.column
