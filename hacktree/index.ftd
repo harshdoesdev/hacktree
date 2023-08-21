@@ -6,6 +6,7 @@
 width: fill-container
 padding.rem: 2
 spacing: space-between
+align-content: center
 
 -- ftd.text: hacktree
 role: $inherited.types.heading-medium
