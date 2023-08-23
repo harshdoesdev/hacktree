@@ -203,5 +203,11 @@ steps: $page.steps
 
 -- end: get-started-steps
 
+-- ftd.document:
+title: hacktree - Build and showcase your personal link tree using fastn
+description: Build and showcase your personal link tree using fastn
+
 -- page:
 steps: $get-started-steps
+
+-- end: ftd.document
