@@ -118,6 +118,10 @@ Email
 -- component page:
 caption bio.about about:
 
+-- ftd.document:
+title: $page.about.name
+description: $page.about.bio
+
 -- ftd.column:
 width: fill-container
 height: fill-container
@@ -155,6 +159,8 @@ for: $link in $page.about.social-links
 -- end: ftd.row
 
 -- end: ftd.column
+
+-- end: ftd.document
 
 -- end: page
 
