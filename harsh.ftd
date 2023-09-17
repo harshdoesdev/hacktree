@@ -1,6 +1,8 @@
 -- import: hacktree/bio
 -- import: hacktree/themes/karma
 
+;; Data
+
 -- bio.social list social-links:
 
 -- bio.social:
@@ -16,26 +18,29 @@ name: linkedin
 url: https://linkedin.com/in/harshsingh-in
 
 -- bio.social:
-name: dev.to
-url: https://dev.to/theharshsingh
+name: youtube
+url: https://youtube.com/harshdoesdev
+
+-- bio.social:
+name: email
+url: mailto://harshsingh.js@gmail.com
+
+-- bio.social:
+name: website
+url: https://harsh-singh.in
 
 -- end: social-links
 
-
-
-
-
 -- bio.about harsh:
 name: Harsh Singh
-nickname: Harsh
+nickname: harsh
 bio: Software Developer from Bharat
-website: https://harsh-singh.in
-email: harshsingh.js@gmail.com
 social-links: $social-links
 
 
 
 
-
+;; Render the page
 
 -- karma.page: $harsh
+
