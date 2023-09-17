@@ -1,0 +1,8 @@
+-- import: hacktree/bio
+
+-- component page:
+caption bio.about about:
+
+-- ftd.text: $page.about.name
+
+-- end: page

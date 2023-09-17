@@ -1,0 +1,11 @@
+-- record social:
+string name:
+string url:
+
+-- record about:
+string name: 
+string nickname: 
+string bio: 
+string website: 
+string email:
+social list social-links:
