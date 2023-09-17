@@ -16,8 +16,6 @@ function build() {
 
         console.log(execSync("fastn build --edition=2023").toString());
 
-        chdir(BUILD_DIR);
-
         execSync(`mv ${BUILD_DIR}/* ${OUTPUT_DIR}`);
     } catch(e) {
         console.log(e);
