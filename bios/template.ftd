@@ -1,0 +1,47 @@
+-- import: hacktree/bio
+-- import: hacktree/themes/karma
+
+
+
+
+;; Social Links
+
+-- bio.social list social-links:
+
+-- bio.social:
+name: github
+url: https://github.com/your-username
+
+-- bio.social:
+name: x
+url: https://x.com/your-username
+
+-- bio.social:
+name: linkedin
+url: https://linkedin.com/in/your-username
+
+-- bio.social:
+name: dev.to
+url: https://dev.to/your-username
+
+-- end: social-links
+
+
+
+
+;; About
+
+-- bio.about your-name:
+name: Your Name
+nickname: your-nickname
+bio: Write something about yourself
+website: https://example.com
+email: youremail@example.com
+social-links: $social-links
+
+
+
+
+;; Call the theme component of your choice to render your page
+
+-- karma.page: $your-name
