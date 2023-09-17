@@ -1,1 +1,26 @@
--- ftd.text: The landing page is under construction
+-- import: hacktree/bio
+-- import: hacktree/themes/karma
+
+;; Data
+
+-- bio.social list social-links:
+
+-- bio.social:
+name: github
+url: https://github.com/harshdoesdev/hacktree
+
+-- end: social-links
+
+-- bio.about harsh:
+name: hacktree
+nickname: hacktree
+bio: Create your own link-in-bio pages in fastn
+social-links: $social-links
+
+
+
+
+;; Render the page
+
+-- karma.page: $harsh
+
