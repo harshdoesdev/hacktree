@@ -13,8 +13,7 @@ url: https://github.com/harshdoesdev/hacktree
 
 -- bio.about harsh:
 name: hacktree
-nickname: hacktree
-bio: Create your own link-in-bio pages in fastn
+bio: Create your own link-in-bio pages using fastn
 social-links: $social-links
 
 

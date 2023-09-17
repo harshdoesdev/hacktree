@@ -1,9 +1,0 @@
--- import: hacktree/harsh/bio
-
--- ftd.text: $bio.harsh.name
-
--- ftd.text: Social Links:
-
--- ftd.text: $link.name
-link: $link.url
-for: $link in $bio.harsh.social-links
