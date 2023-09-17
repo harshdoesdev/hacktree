@@ -10,22 +10,23 @@ jobs:
   build:
     permissions: write-all
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./bios
     steps:
       - uses: actions/checkout@v2
-      - name: Change to bios directory
-        run: cd bios
       - uses: FranzDiebold/github-env-vars-action@v2
       - name: Download the cached .build
         uses: actions/cache@v2
         with:
-          path: .build
+          path: ./bios/.build
           key: build-artifact
       - name: Check and Restore Cache for fastn.com Directory
         uses: actions/cache@v2
         with:
           path: |
             /Library/Caches/fastn.com
-          key: fastn-com-${{ hashFiles('.build/**') }}
+          key: fastn-com-${{ hashFiles('./bios/build/**') }}
           restore-keys: |
             fastn-com-
       - run: sh -c "$(curl -fsSL https://fastn.com/install.sh)"
@@ -42,14 +43,14 @@ jobs:
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./.build
+          publish_dir: ./bios/.build
       - name: Cache .build Directory
         uses: actions/cache@v2
         with:
           key: build-artifact
           restore-keys: |
             build-artifact
-          path: .build
+          path: ./bios/.build
       - name: Save fastn.com to Cache
         uses: actions/cache@v2
         with:
