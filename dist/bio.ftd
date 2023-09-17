@@ -1,9 +1,0 @@
--- record social:
-string name:
-string url:
-
--- record about:
-string name:
-optional string nickname: 
-string bio: 
-social list social-links:
