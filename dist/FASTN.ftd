@@ -1,5 +1,0 @@
--- import: fastn
-
--- fastn.package: hacktree
-
--- fastn.auto-import: hacktree/assets
