@@ -330,9 +330,52 @@ padding-bottom: 3px;
 </style>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<body data-id="1"><div data-id="2" class="ft_column __w-1 __h-2"><div data-id="3">The landing page is under construction</div></div></body><style id="styles">
+<body data-id="1"><div data-id="2" class="ft_column __w-1 __h-2"><div data-id="3" class="ft_column full"><div data-id="4" class="ft_column __w-3 __h-4 __bgc-5 __jc-6 __ali-7 __g-8"><div data-id="5" class="ft_row __jc-9 __ali-10 __g-11"><div data-id="6" class="__c-12 __rl-13">hacktree</div><comment data-id="7"></comment><div data-id="8" class="__c-14 __rl-15">aka. hacktree</div></div><div data-id="9" class="__c-16 __rl-17">Create your own link-in-bio pages in fastn</div><div data-id="10" class="ft_row __p-18 __fw-19 __jc-20"><comment data-id="11"></comment><div data-id="12" class="ft_column"><comment data-id="13"></comment><comment data-id="14"></comment><a data-id="15" href="https://github.com/harshdoesdev/hacktree" target="_blank" class="ft_row __p-21 __jc-22 __ali-23 __g-24"><img data-id="16" src="-/hacktree/images/social/github.svg" class="__w-25 __h-26"></img><div data-id="17" class="__c-27 __rl-28">Github</div></a><comment data-id="18"></comment><comment data-id="19"></comment><comment data-id="20"></comment><comment data-id="21"></comment></div></div></div></div></div></body><style id="styles">
 .__w-1 { width: 100%; }
 .__h-2 { height: 100%; }
+.__w-3 { width: 100%; }
+.__h-4 { height: 100%; }
+.__bgc-5 { background-color: #ffffff; }
+body.dark .__bgc-5 { background-color: #000000; }
+.__jc-6 { justify-content: center; }
+.__ali-7 { align-items: center; }
+.__g-8 { gap: 2rem; }
+.__jc-9 { justify-content: center; }
+.__ali-10 { align-items: center; }
+.__g-11 { gap: 1rem; }
+.__c-12 { color: #000000 !important; }
+body.dark .__c-12 { color: #ffffff !important; }
+.__c-12:visited { color: #000000 !important; }
+body.dark  .__c-12:visited { color: #ffffff !important; }
+.__rl-13 {  font-family: sans-serif; font-size: 24px; font-weight: 400; line-height: 31px; }
+body.mobile .__rl-13 {  font-family: sans-serif; font-size: 22px; font-weight: 400; line-height: 29px; }
+.__c-14 { color: #8a8a8a !important; }
+body.dark .__c-14 { color: #585858 !important; }
+.__c-14:visited { color: #8a8a8a !important; }
+body.dark  .__c-14:visited { color: #585858 !important; }
+.__rl-15 {  font-family: sans-serif; font-size: 18px; font-weight: 400; line-height: 30px; }
+body.mobile .__rl-15 {  font-family: sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; }
+.__c-16 { color: #000000 !important; }
+body.dark .__c-16 { color: #ffffff !important; }
+.__c-16:visited { color: #000000 !important; }
+body.dark  .__c-16:visited { color: #ffffff !important; }
+.__rl-17 {  font-family: sans-serif; font-size: 18px; font-weight: 400; line-height: 30px; }
+body.mobile .__rl-17 {  font-family: sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; }
+.__p-18 { padding: 2rem; }
+.__fw-19 { flex-wrap: wrap; }
+.__jc-20 { justify-content: space-between; }
+.__p-21 { padding: 1rem; }
+.__jc-22 { justify-content: center; }
+.__ali-23 { align-items: center; }
+.__g-24 { gap: 1rem; }
+.__w-25 { width: 24px; }
+.__h-26 { height: 24px; }
+.__c-27 { color: #000000 !important; }
+body.dark .__c-27 { color: #ffffff !important; }
+.__c-27:visited { color: #000000 !important; }
+body.dark  .__c-27:visited { color: #ffffff !important; }
+.__rl-28 {  font-family: sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; }
+body.mobile .__rl-28 {  font-family: sans-serif; font-size: 12px; font-weight: 400; line-height: 16px; }
 </style>
 <script>
 (function() {
@@ -342,13 +385,336 @@ let main = function (parent) {
 let __fastn_super_package_name__ = __fastn_package_name__;
 __fastn_package_name__ = "hacktree";
 try {
-let parenti0 = fastn_dom.createKernel(parent, fastn_dom.ElementKind.Text);
-parenti0.setProperty(fastn_dom.PropertyKind.StringValue, "The landing page is under construction", inherited);
+let parenti0 = hacktree_themes_karma__page(parent, inherited, {
+about: global.hacktree___harsh
+});
 } finally {
 __fastn_package_name__ = __fastn_super_package_name__;
 }
 }
 global["main"] = main;
+fastn_utils.createNestedObject(global, "hacktree_themes_karma__text_color", fastn.recordInstance({
+light: "#000000",
+dark: "#ffffff"
+}));
+fastn_utils.createNestedObject(global, "hacktree_themes_karma__secondary_text_color", fastn.recordInstance({
+light: "#8a8a8a",
+dark: "#585858"
+}));
+let hacktree_themes_karma__format_nickname = function (args)
+{
+let __fastn_super_package_name__ = __fastn_package_name__;
+__fastn_package_name__ = "hacktree";
+try {
+let __args__ = args;
+return ("aka. " + fastn_utils.getter(__args__.a));
+} finally {
+__fastn_package_name__ = __fastn_super_package_name__;
+}
+}
+global["hacktree_themes_karma__format_nickname"] = hacktree_themes_karma__format_nickname;
+let hacktree_themes_karma__icon = function (parent, inherited, args)
+{
+let __fastn_super_package_name__ = __fastn_package_name__;
+__fastn_package_name__ = "hacktree";
+try {
+let __args__ = {
+};
+inherited = fastn_utils.getInheritedValues(__args__, inherited, args);
+__args__ = {
+...__args__,
+...args
+};
+let parenti0 = fastn_dom.createKernel(parent, fastn_dom.ElementKind.Image);
+parenti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.src, inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.Fixed(fastn_dom.Length.Px(24)), inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.Height, fastn_dom.Resizing.Fixed(fastn_dom.Length.Px(24)), inherited);
+return parenti0;
+} finally {
+__fastn_package_name__ = __fastn_super_package_name__;
+}
+}
+global["hacktree_themes_karma__icon"] = hacktree_themes_karma__icon;
+let hacktree_themes_karma__social_link_with_icon = function (parent, inherited, args)
+{
+let __fastn_super_package_name__ = __fastn_package_name__;
+__fastn_package_name__ = "hacktree";
+try {
+let __args__ = {
+hovering: fastn.mutable(false),
+};
+inherited = fastn_utils.getInheritedValues(__args__, inherited, args);
+__args__ = {
+...__args__,
+...args
+};
+let parenti0 = fastn_dom.createKernel(parent, fastn_dom.ElementKind.Row);
+parenti0.addEventHandler(fastn_dom.Event.MouseEnter, function () {
+ftd.set_boolean({
+a: __args__.hovering,
+v: true,
+}, parenti0);
+});
+parenti0.addEventHandler(fastn_dom.Event.MouseLeave, function () {
+ftd.set_boolean({
+a: __args__.hovering,
+v: false,
+}, parenti0);
+});
+parenti0.setProperty(fastn_dom.PropertyKind.Padding, fastn_dom.Length.Rem(1), inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.Link, __args__.link.get("url"), inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.OpenInNewTab, true, inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.AlignContent, fastn_dom.AlignContent.Center, inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.Fixed(fastn_dom.Length.Rem(1)), inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
+let rooti0 = hacktree_themes_karma__icon(root, inherited, {
+src: __args__.icon_src
+});
+},
+function (root, inherited) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
+rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.text, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Color, global.hacktree_themes_karma__text_color, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_small"), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.TextStyle, fastn.formula([__args__.hovering], function () {
+if (function () {
+return fastn_utils.getter(__args__.hovering);
+}()) {
+return fastn.mutableList([fastn_dom.TextStyle.Underline]);
+}
+}
+), inherited);
+}
+]), inherited);
+return parenti0;
+} finally {
+__fastn_package_name__ = __fastn_super_package_name__;
+}
+}
+global["hacktree_themes_karma__social_link_with_icon"] = hacktree_themes_karma__social_link_with_icon;
+fastn_utils.createNestedObject(global, "hacktree_assets__files.images.social.gmail.svg", fastn.recordInstance({
+light: "-/hacktree/images/social/gmail.svg",
+dark: "-/hacktree/images/social/gmail.svg"
+}));
+fastn_utils.createNestedObject(global, "hacktree_assets__files.images.social.google_chrome.svg", fastn.recordInstance({
+light: "-/hacktree/images/social/google-chrome.svg",
+dark: "-/hacktree/images/social/google-chrome-dark.svg"
+}));
+fastn_utils.createNestedObject(global, "hacktree_assets__files.images.social.linkedin.svg", fastn.recordInstance({
+light: "-/hacktree/images/social/linkedin.svg",
+dark: "-/hacktree/images/social/linkedin-dark.svg"
+}));
+fastn_utils.createNestedObject(global, "hacktree_assets__files.images.social.youtube.svg", fastn.recordInstance({
+light: "-/hacktree/images/social/youtube.svg",
+dark: "-/hacktree/images/social/youtube-dark.svg"
+}));
+fastn_utils.createNestedObject(global, "hacktree_assets__files.images.social.github.svg", fastn.recordInstance({
+light: "-/hacktree/images/social/github.svg",
+dark: "-/hacktree/images/social/github-dark.svg"
+}));
+fastn_utils.createNestedObject(global, "hacktree_assets__files.images.social.twitter.svg", fastn.recordInstance({
+light: "-/hacktree/images/social/twitter.svg",
+dark: "-/hacktree/images/social/twitter-dark.svg"
+}));
+let hacktree_themes_karma__social_link = function (parent, inherited, args)
+{
+let __fastn_super_package_name__ = __fastn_package_name__;
+__fastn_package_name__ = "hacktree";
+try {
+let __args__ = {
+};
+inherited = fastn_utils.getInheritedValues(__args__, inherited, args);
+__args__ = {
+...__args__,
+...args
+};
+let parenti0 = fastn_dom.createKernel(parent, fastn_dom.ElementKind.Column);
+parenti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
+fastn_dom.conditionalDom(root, [
+__args__.link.get("name")
+], function () {
+return (fastn_utils.getter(__args__.link.get("name")) == "x");
+}, function (root) {
+let rooti0 = hacktree_themes_karma__social_link_with_icon(root, inherited, {
+link: __args__.link,
+text: "Twitter",
+icon_src: global.hacktree_assets__files.get("images").get("social").get("twitter").get("svg")
+});
+return rooti0;
+});
+},
+function (root, inherited) {
+fastn_dom.conditionalDom(root, [
+__args__.link.get("name")
+], function () {
+return (fastn_utils.getter(__args__.link.get("name")) == "github");
+}, function (root) {
+let rooti0 = hacktree_themes_karma__social_link_with_icon(root, inherited, {
+link: __args__.link,
+text: "Github",
+icon_src: global.hacktree_assets__files.get("images").get("social").get("github").get("svg")
+});
+return rooti0;
+});
+},
+function (root, inherited) {
+fastn_dom.conditionalDom(root, [
+__args__.link.get("name")
+], function () {
+return (fastn_utils.getter(__args__.link.get("name")) == "youtube");
+}, function (root) {
+let rooti0 = hacktree_themes_karma__social_link_with_icon(root, inherited, {
+link: __args__.link,
+text: "Youtube",
+icon_src: global.hacktree_assets__files.get("images").get("social").get("youtube").get("svg")
+});
+return rooti0;
+});
+},
+function (root, inherited) {
+fastn_dom.conditionalDom(root, [
+__args__.link.get("name")
+], function () {
+return (fastn_utils.getter(__args__.link.get("name")) == "linkedin");
+}, function (root) {
+let rooti0 = hacktree_themes_karma__social_link_with_icon(root, inherited, {
+link: __args__.link,
+text: "LinkedIn",
+icon_src: global.hacktree_assets__files.get("images").get("social").get("linkedin").get("svg")
+});
+return rooti0;
+});
+},
+function (root, inherited) {
+fastn_dom.conditionalDom(root, [
+__args__.link.get("name")
+], function () {
+return (fastn_utils.getter(__args__.link.get("name")) == "website");
+}, function (root) {
+let rooti0 = hacktree_themes_karma__social_link_with_icon(root, inherited, {
+link: __args__.link,
+text: "Website",
+icon_src: global.hacktree_assets__files.get("images").get("social").get("google_chrome").get("svg")
+});
+return rooti0;
+});
+},
+function (root, inherited) {
+fastn_dom.conditionalDom(root, [
+__args__.link.get("name")
+], function () {
+return (fastn_utils.getter(__args__.link.get("name")) == "email");
+}, function (root) {
+let rooti0 = hacktree_themes_karma__social_link_with_icon(root, inherited, {
+link: __args__.link,
+text: "Email",
+icon_src: global.hacktree_assets__files.get("images").get("social").get("gmail").get("svg")
+});
+return rooti0;
+});
+}
+]), inherited);
+return parenti0;
+} finally {
+__fastn_package_name__ = __fastn_super_package_name__;
+}
+}
+global["hacktree_themes_karma__social_link"] = hacktree_themes_karma__social_link;
+fastn_utils.createNestedObject(global, "hacktree_themes_karma__background_color", fastn.recordInstance({
+light: "#ffffff",
+dark: "#000000"
+}));
+let hacktree_themes_karma__page = function (parent, inherited, args)
+{
+let __fastn_super_package_name__ = __fastn_package_name__;
+__fastn_package_name__ = "hacktree";
+try {
+let __args__ = {
+};
+inherited = fastn_utils.getInheritedValues(__args__, inherited, args);
+__args__ = {
+...__args__,
+...args
+};
+let parenti0 = fastn_dom.createKernel(parent, fastn_dom.ElementKind.Document);
+parenti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
+rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Height, fastn_dom.Resizing.FillContainer, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Background, fastn_dom.BackgroundStyle.Solid(global.hacktree_themes_karma__background_color), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.AlignContent, fastn_dom.AlignContent.Center, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.Fixed(fastn_dom.Length.Rem(2)), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
+rooti0.setProperty(fastn_dom.PropertyKind.AlignContent, fastn_dom.AlignContent.Center, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.Fixed(fastn_dom.Length.Rem(1)), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
+rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.about.get("name"), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Color, global.hacktree_themes_karma__text_color, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_small"), inherited);
+},
+function (root, inherited) {
+fastn_dom.conditionalDom(root, [
+__args__.about.get("nickname")
+], function () {
+return (!ftd.is_empty(__args__.about.get("nickname")));
+}, function (root) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
+rooti0.setProperty(fastn_dom.PropertyKind.StringValue, fastn.formula([__args__.about.get("nickname")], function () {
+return hacktree_themes_karma__format_nickname({
+a: __args__.about.get("nickname"),
+}, rooti0);
+}), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Color, global.hacktree_themes_karma__secondary_text_color, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
+return rooti0;
+});
+}
+]), inherited);
+},
+function (root, inherited) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
+rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.about.get("bio"), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Color, global.hacktree_themes_karma__text_color, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
+},
+function (root, inherited) {
+let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
+rooti0.setProperty(fastn_dom.PropertyKind.Padding, fastn_dom.Length.Rem(2), inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Wrap, true, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.SpaceBetween, inherited);
+rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
+fastn_utils.getter(__args__.about.get("social_links")).forLoop(root, function (root, item, index) {
+let rooti0 = hacktree_themes_karma__social_link(root, inherited, {
+link: item
+});
+return rooti0;
+});
+}
+]), inherited);
+}
+]), inherited);
+}
+]), inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.DocumentProperties.MetaTitle, __args__.about.get("name"), inherited);
+parenti0.setProperty(fastn_dom.PropertyKind.DocumentProperties.MetaDescription, __args__.about.get("bio"), inherited);
+return parenti0;
+} finally {
+__fastn_package_name__ = __fastn_super_package_name__;
+}
+}
+global["hacktree_themes_karma__page"] = hacktree_themes_karma__page;
+fastn_utils.createNestedObject(global, "hacktree___social_links", fastn.mutableList([fastn.recordInstance({
+name: "github",
+url: "https://github.com/harshdoesdev/hacktree"
+})]));
+fastn_utils.createNestedObject(global, "hacktree___harsh", fastn.recordInstance({
+name: "hacktree",
+nickname: "hacktree",
+bio: "Create your own link-in-bio pages in fastn",
+social_links: global.hacktree___social_links
+}));
 fastn_dom.codeData.availableThemes["coldark-theme.dark"] = "code-theme-9A3284FD117DFF7CFD432FF860A5E14169FA592BC3DA4F5E8A6975143F5EA07F.css";
 fastn_dom.codeData.availableThemes["coldark-theme.light"] = "code-theme-99CD7B013C96C4632F0AEA39AC265387B814AE85A7D33666A4AE4BEFF59016D0.css";
 fastn_dom.codeData.availableThemes["coy-theme"] = "code-theme-B3AEA322EADEDA61F0E219845A0E9C8E73F6345E49362B46E6F52CEE40471248.css";
