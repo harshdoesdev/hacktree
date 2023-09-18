@@ -1,47 +1,15 @@
--- import: hacktree/bio
--- import: hacktree/themes/karma
+;; Update the below info with your details
+;; You can also comment any links you don't need
+;; eg. ;; email: your@email.com
 
-
-
-
-;; Social Links
-
--- bio.social list social-links:
-
--- bio.social:
-name: github
-url: https://github.com/your-username
-
--- bio.social:
-name: x
-url: https://x.com/your-username
-
--- bio.social:
-name: linkedin
-url: https://linkedin.com/in/your-username
-
--- bio.social:
-name: dev.to
-url: https://dev.to/your-username
-
--- end: social-links
-
-
-
-
-;; About
-
--- bio.about your-name:
-name: Your Name
-nickname: your-nickname
-bio: Write something about yourself
+-- bio: Your name
+nickname: Your nickname
+location: Your location
+company: Your company
+twitter: your-twitter-username
+linked-in: your-linked-in-username
+youtube: your-youtube-username
 website: https://example.com
-email: youremail@example.com
-social-links: $social-links
+email: your@email.com
 
-
-
-
-;; Call the theme component of your choice to render your page
-
--- karma.page: $your-name
+Write something about yourself
