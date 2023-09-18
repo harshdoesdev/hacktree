@@ -35,8 +35,6 @@ url: https://dev.to/your-username
 name: Your Name
 nickname: your-nickname
 bio: Write something about yourself
-website: https://example.com
-email: youremail@example.com
 social-links: $social-links
 
 
