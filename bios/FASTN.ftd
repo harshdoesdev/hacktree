@@ -1,5 +1,7 @@
 -- import: fastn
 
--- fastn.package: hacktree
+-- fastn.package: hacktree.in
 
--- fastn.auto-import: harshdoesdev.github.io/hacktree-ui/bio
+-- fastn.dependency: harshdoesdev.github.io/hacktree-ui as hacktree
+
+-- fastn.auto-import: hacktree
