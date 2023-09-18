@@ -1,25 +1,5 @@
--- import: hacktree/bio
--- import: hacktree/themes/karma
-
-;; Data
-
--- bio.social list social-links:
-
--- bio.social:
-name: github
-url: https://github.com/harshdoesdev/hacktree
-
--- end: social-links
-
--- bio.about harsh:
-name: hacktree
-bio: Create your own link-in-bio pages using fastn
-social-links: $social-links
+-- hacktree.bio: Hacktree
+github: harshdoesdev/hacktree
 
 
-
-
-;; Render the page
-
--- karma.page: $harsh
-
+Create your own link-in-bio using fastn
