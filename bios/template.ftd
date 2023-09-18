@@ -2,7 +2,7 @@
 ;; You can also comment any links you don't need
 ;; eg. ;; email: your@email.com
 
--- bio: Your name
+-- hacktree.bio: Your name
 nickname: Your nickname
 location: Your location
 company: Your company
@@ -11,3 +11,6 @@ linked-in: your-linked-in-username
 youtube: your-youtube-username
 website: https://example.com
 email: your@email.com
+
+
+Write something about yourself
