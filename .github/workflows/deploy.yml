@@ -16,6 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: FranzDiebold/github-env-vars-action@v2
+      - name: Download the cached .build
+        uses: actions/cache@v2
+        with:
+          path: ./bios/.build
+          key: build-artifact
+      - name: Check and Restore Cache for fastn.com Directory
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/fastn.com
+          key: fastn-com-${{ hashFiles('./bios/build/**') }}
+          restore-keys: |
+            fastn-com-
       - run: sh -c "$(curl -fsSL https://fastn.com/install.sh)"
       - name: Build the pages with fastn
         run: |
@@ -31,3 +43,18 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./bios/.build
+      - name: Cache .build Directory
+        uses: actions/cache@v2
+        with:
+          key: build-artifact
+          restore-keys: |
+            build-artifact
+          path: ./bios/.build
+      - name: Save fastn.com to Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+              ~/.cache/fastn.com
+          key: fastn-com-
+          restore-keys: |
+            fastn-com-
